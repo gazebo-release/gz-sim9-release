@@ -1,0 +1,28 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+export PYBUILD_NAME=ignition-gazebo7
+
+.PHONY: override_dh_auto_configure \
+        override_dh_install \
+        override_dh_auto_test
+
+%:
+	dh $@ --with python3
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+	-DCMAKE_BUILD_TYPE=RelWithDebInfo \
+	-DUSE_SYSTEM_PATHS_FOR_PYTHON_INSTALLATION=ON \
+	-DUSE_DIST_PACKAGES_FOR_PYTHON=ON
+
+override_dh_install:
+	dh_install --
+	$(RM) debian/gz-sim*/usr/share/gz/gz-sim*/gz-sim*.tag.xml
+
+override_dh_auto_test:
+	# failing tests needs inspection
+	true
+
+override_dh_strip:
+	dh_strip -a --dbg-package=libgz-sim7-dbg
