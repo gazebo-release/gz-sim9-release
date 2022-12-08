@@ -1,4 +1,4 @@
-Source: gz-sim7
+Source: gz-sim8
 Maintainer: Jose Luis Rivero <jrivero@osrfoundation.org>
 Section: science
 Priority: optional
@@ -32,18 +32,18 @@ Replaces: ignition-gazebo7 (<< 6.999.999+nightly+git20220630+2rcb61c01f8894e4f43
 # doxygen and grapviz are excluded per bug:
 # https://github.com/gazebosim/gz-sim/issues/1409
 Vcs-Browser: https://github.com/gazebosim/gz-sim
-Vcs-Git: https://github.com/gazebo-release/gz-sim7-release
+Vcs-Git: https://github.com/gazebo-release/gz-sim8-release
 Standards-Version: 4.5.1
 Homepage: http://gazebosim.org/
 
-Package: libgz-sim7
+Package: libgz-sim8
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          qml-module-qtqml-models2
-Suggests: gz-sim7-cli
+Suggests: gz-sim8-cli
 Breaks: libignition-gazebo7 (<< 6.999.999+nightly+git20220630+2rcb61c01f8894e4f435f544d3511f346eaa753142-2)
 Replaces: libignition-gazebo7 (<< 6.999.999+nightly+git20220630+2rcb61c01f8894e4f435f544d3511f346eaa753142-2)
 Multi-Arch: same
@@ -53,9 +53,9 @@ Description: Gazebo Sim classes and functions for robot apps - Shared library
  .
  Main shared library
 
-Package: gz-sim7-cli
+Package: gz-sim8-cli
 Architecture: any
-Depends: libgz-sim7 (= ${binary:Version}),
+Depends: libgz-sim8 (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends}
 Multi-Arch: no
@@ -65,7 +65,7 @@ Description: Gazebo Sim classes and functions for robot apps - CLI
  .
  The package ships the CLI.
 
-Package: libgz-sim7-plugins
+Package: libgz-sim8-plugins
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
@@ -79,7 +79,7 @@ Description: Gazebo Sim classes and functions for robot apps - Plugins
  .
  Plugins collection
 
-Package: libgz-sim7-dev
+Package: libgz-sim8-dev
 Architecture: any
 Section: libdevel
 Depends: libtinyxml2-dev,
@@ -101,8 +101,8 @@ Depends: libtinyxml2-dev,
          libgz-utils2-cli-dev,
          libgz-utils2-dev,
          libsdformat13-dev,
-         libgz-sim7 (= ${binary:Version}),
-         libgz-sim7-plugins (= ${binary:Version}),
+         libgz-sim8 (= ${binary:Version}),
+         libgz-sim8-plugins (= ${binary:Version}),
          ${misc:Depends}
 Breaks: libignition-gazebo7-dev (<< 6.999.999+nightly+git20220630+2rcb61c01f8894e4f435f544d3511f346eaa753142-2)
 Replaces: libignition-gazebo7-dev (<< 6.999.999+nightly+git20220630+2rcb61c01f8894e4f435f544d3511f346eaa753142-2)
@@ -113,9 +113,9 @@ Description: Gazebo Sim classes and functions for robot apps - Development files
  .
  Development files
 
-Package: python3-gz-sim7
+Package: python3-gz-sim8
 Architecture: any
-Depends: libgz-sim7 (= ${binary:Version}),
+Depends: libgz-sim8 (= ${binary:Version}),
          python3-distutils,
          python3-pybind11,
          ${misc:Depends},
@@ -123,19 +123,19 @@ Depends: libgz-sim7 (= ${binary:Version}),
          ${shlibs:Depends},
 Breaks: python3-ignition-gazebo7 (<< 6.999.999+nightly+git20220630+2rcb61c01f8894e4f435f544d3511f346eaa753142-2)
 Replaces: python3-ignition-gazebo7 (<< 6.999.999+nightly+git20220630+2rcb61c01f8894e4f435f544d3511f346eaa753142-2)
-Enhances: libgz-sim7
+Enhances: libgz-sim8
 Description: Gazebo Sim classes and functions for robot apps - Development files
  Gazebo Sim is a component in the Gazebo framework, a set of libraries
  designed to rapidly develop robot applications.
  .
  The package contains the Python3 bindings.
 
-Package: libgz-sim7-dbg
+Package: libgz-sim8-dbg
 Architecture: any
 Section: debug
 Priority: extra
 Depends:
-     libgz-sim7 (= ${binary:Version}),
+     libgz-sim8 (= ${binary:Version}),
      ${misc:Depends}
 Breaks: libignition-gazebo7-dbg (<< 6.999.999+nightly+git20220630+2rcb61c01f8894e4f435f544d3511f346eaa753142-2)
 Replaces: libignition-gazebo7-dbg (<< 6.999.999+nightly+git20220630+2rcb61c01f8894e4f435f544d3511f346eaa753142-2)
@@ -147,7 +147,7 @@ Description: Gazebo Sim classes and functions for robot apps - Debug symbols
  Debug symbols
 
 Package: libignition-gazebo7
-Depends: libgz-sim7, ${misc:Depends}
+Depends: libgz-sim8, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
@@ -155,7 +155,7 @@ Description: transitional package
  This is a transitional package. It can safely be removed.
 
 Package: ignition-gazebo7-cli
-Depends: gz-sim7-cli, ${misc:Depends}
+Depends: gz-sim8-cli, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
@@ -163,7 +163,7 @@ Description: transitional package
  This is a transitional package. It can safely be removed.
 
 Package: libignition-gazebo7-plugins
-Depends: libgz-sim7-plugins, ${misc:Depends}
+Depends: libgz-sim8-plugins, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
@@ -171,7 +171,7 @@ Description: transitional package
  This is a transitional package. It can safely be removed.
 
 Package: libignition-gazebo7-dev
-Depends: libgz-sim7-dev, ${misc:Depends}
+Depends: libgz-sim8-dev, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
@@ -179,7 +179,7 @@ Description: transitional package
  This is a transitional package. It can safely be removed.
 
 Package: python3-ignition-gazebo7
-Depends: python3-gz-sim7, ${misc:Depends}
+Depends: python3-gz-sim8, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
@@ -187,7 +187,7 @@ Description: transitional package
  This is a transitional package. It can safely be removed.
 
 Package: libignition-gazebo7-dbg
-Depends: libgz-sim7-dbg, ${misc:Depends}
+Depends: libgz-sim8-dbg, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs

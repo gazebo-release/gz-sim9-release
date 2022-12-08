@@ -25,4 +25,4 @@ override_dh_auto_test:
 	true
 
 override_dh_strip:
-	dh_strip -a --dbg-package=libgz-sim7-dbg
+	dh_strip -a --dbg-package=libgz-sim8-dbg
