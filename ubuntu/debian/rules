@@ -1,8 +1,6 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
-export PYBUILD_NAME=ignition-gazebo7
-
 .PHONY: override_dh_auto_configure \
         override_dh_install \
         override_dh_auto_test
