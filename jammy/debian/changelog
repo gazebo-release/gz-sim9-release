@@ -1,3 +1,9 @@
+gz-sim8 (8.0.0-1~jammy) jammy; urgency=medium
+
+  * gz-sim8 8.0.0-1 release
+
+ -- Addisu Z. Taddese <addisu@openrobotics.org>  Fri, 29 Sep 2023 16:20:43 -0500
+
 gz-sim8 (8.0.0~pre2-1~jammy) jammy; urgency=medium
 
   * gz-sim8 8.0.0~pre2-1 release
