@@ -1,23 +1,6 @@
-gz-sim8 (8.0.0-1~jammy) jammy; urgency=medium
-
-  * gz-sim8 8.0.0-1 release
-
- -- Addisu Z. Taddese <addisu@openrobotics.org>  Fri, 29 Sep 2023 16:20:43 -0500
-
-gz-sim8 (8.0.0~pre2-1~jammy) jammy; urgency=medium
-
-  * gz-sim8 8.0.0~pre2-1 release
-
- -- Addisu Z. Taddese <addisu@openrobotics.org>  Thu, 28 Sep 2023 22:19:36 -0500
-
-gz-sim8 (8.0.0~pre1-1~jammy) jammy; urgency=medium
-
-  * gz-sim8 8.0.0~pre1-1 release
-
- -- Ian Chen <ichen@openrobotics.org>  Thu, 31 Aug 2023 06:08:26 +0000
-
-gz-sim8 (7.999.999-1~jammy) jammy; urgency=medium
+gz-sim9 (8.999.999-1~jammy) jammy; urgency=medium
 
   * Stub to be removed after first entry
 
- -- Ian Chen <ichen@openrobotics.org>  Wed, 07 Dec 2022 17:36:18 -0700
+ -- Ian Chen <ichen@openrobotics.org>  Wed, 11 Oct 2023 21:01:41 +0000
+

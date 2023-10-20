@@ -1,4 +1,4 @@
-Source: gz-sim8
+Source: gz-sim9
 Maintainer: Jose Luis Rivero <jrivero@osrfoundation.org>
 Section: science
 Priority: optional
@@ -8,42 +8,42 @@ Build-Depends: cmake,
                dh-python,
                libtinyxml2-dev,
                libgz-tools2-dev,
-               libgz-cmake3-dev,
-               libgz-common5-av-dev,
-               libgz-common5-graphics-dev,
-               libgz-common5-io-dev,
-               libgz-common5-profiler-dev,
-               libgz-common5-events-dev,
-               libgz-fuel-tools9-dev,
-               libgz-gui8-dev,
-               libgz-math7-dev,
-               libgz-math7-eigen3-dev,
-               libgz-msgs10-dev,
-               libgz-plugin2-dev,
-               libgz-physics7-dev,
-               libgz-sensors8-dev,
-               libgz-rendering8-dev,
-               libgz-transport13-log-dev,
-               libgz-utils2-cli-dev,
-               libgz-utils2-dev,
-               libsdformat14-dev,
+               libgz-cmake4-dev,
+               libgz-common6-av-dev,
+               libgz-common6-graphics-dev,
+               libgz-common6-io-dev,
+               libgz-common6-profiler-dev,
+               libgz-common6-events-dev,
+               libgz-fuel-tools10-dev,
+               libgz-gui9-dev,
+               libgz-math8-dev,
+               libgz-math8-eigen3-dev,
+               libgz-msgs11-dev,
+               libgz-plugin3-dev,
+               libgz-physics8-dev,
+               libgz-sensors9-dev,
+               libgz-rendering9-dev,
+               libgz-transport14-log-dev,
+               libgz-utils3-cli-dev,
+               libgz-utils3-dev,
+               libsdformat15-dev,
                python3-dev,
                python3-pybind11
 # doxygen and grapviz are excluded per bug:
 # https://github.com/gazebosim/gz-sim/issues/1409
 Vcs-Browser: https://github.com/gazebosim/gz-sim
-Vcs-Git: https://github.com/gazebo-release/gz-sim8-release
+Vcs-Git: https://github.com/gazebo-release/gz-sim9-release
 Standards-Version: 4.5.1
 Homepage: http://gazebosim.org/
 
-Package: libgz-sim8
+Package: libgz-sim9
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          qml-module-qtqml-models2
-Recommends: gz-sim8-cli
+Recommends: gz-sim9-cli
 Multi-Arch: same
 Description: Gazebo Sim classes and functions for robot apps - Shared library
  Gazebo Sim is a component in the Gazebo framework, a set of libraries
@@ -51,9 +51,9 @@ Description: Gazebo Sim classes and functions for robot apps - Shared library
  .
  Main shared library
 
-Package: gz-sim8-cli
+Package: gz-sim9-cli
 Architecture: any
-Depends: libgz-sim8 (= ${binary:Version}),
+Depends: libgz-sim9 (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends}
 Multi-Arch: no
@@ -63,12 +63,12 @@ Description: Gazebo Sim classes and functions for robot apps - CLI
  .
  The package ships the CLI.
 
-Package: libgz-sim8-plugins
+Package: libgz-sim9-plugins
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Recommends: python3-gz-sim8
+Recommends: python3-gz-sim9
 Multi-Arch: same
 Description: Gazebo Sim classes and functions for robot apps - Plugins
  Gazebo Sim is a component in the Gazebo framework, a set of libraries
@@ -76,31 +76,31 @@ Description: Gazebo Sim classes and functions for robot apps - Plugins
  .
  Plugins collection
 
-Package: libgz-sim8-dev
+Package: libgz-sim9-dev
 Architecture: any
 Section: libdevel
 Depends: libtinyxml2-dev,
          libgz-tools2-dev,
-         libgz-cmake3-dev,
-         libgz-common5-av-dev,
-         libgz-common5-graphics-dev,
-         libgz-common5-profiler-dev,
-         libgz-common5-events-dev,
-         libgz-fuel-tools9-dev,
-         libgz-gui8-dev,
-         libgz-math7-dev,
-         libgz-math7-eigen3-dev,
-         libgz-msgs10-dev,
-         libgz-plugin2-dev,
-         libgz-physics7-dev,
-         libgz-sensors8-dev,
-         libgz-rendering8-dev,
-         libgz-transport13-log-dev,
-         libgz-utils2-cli-dev,
-         libgz-utils2-dev,
-         libsdformat14-dev,
-         libgz-sim8 (= ${binary:Version}),
-         libgz-sim8-plugins (= ${binary:Version}),
+         libgz-cmake4-dev,
+         libgz-common6-av-dev,
+         libgz-common6-graphics-dev,
+         libgz-common6-profiler-dev,
+         libgz-common6-events-dev,
+         libgz-fuel-tools10-dev,
+         libgz-gui9-dev,
+         libgz-math8-dev,
+         libgz-math8-eigen3-dev,
+         libgz-msgs11-dev,
+         libgz-plugin3-dev,
+         libgz-physics8-dev,
+         libgz-sensors9-dev,
+         libgz-rendering9-dev,
+         libgz-transport14-log-dev,
+         libgz-utils3-cli-dev,
+         libgz-utils3-dev,
+         libsdformat15-dev,
+         libgz-sim9 (= ${binary:Version}),
+         libgz-sim9-plugins (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Sim classes and functions for robot apps - Development files
@@ -109,31 +109,31 @@ Description: Gazebo Sim classes and functions for robot apps - Development files
  .
  Development files
 
-Package: python3-gz-sim8
+Package: python3-gz-sim9
 Architecture: any
-Depends: libgz-sim8 (= ${binary:Version}),
+Depends: libgz-sim9 (= ${binary:Version}),
          python3-distutils,
-         python3-gz-math7,
-         python3-gz-msgs10,
-         python3-gz-transport13,
+         python3-gz-math8,
+         python3-gz-msgs11,
+         python3-gz-transport14,
          python3-pybind11,
-         python3-sdformat14,
+         python3-sdformat15,
          ${misc:Depends},
          ${python3:Depends},
          ${shlibs:Depends},
-Enhances: libgz-sim8
+Enhances: libgz-sim9
 Description: Gazebo Sim classes and functions for robot apps - Development files
  Gazebo Sim is a component in the Gazebo framework, a set of libraries
  designed to rapidly develop robot applications.
  .
  The package contains the Python3 bindings.
 
-Package: libgz-sim8-dbg
+Package: libgz-sim9-dbg
 Architecture: any
 Section: debug
 Priority: extra
 Depends:
-     libgz-sim8 (= ${binary:Version}),
+     libgz-sim9 (= ${binary:Version}),
      ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Sim classes and functions for robot apps - Debug symbols
