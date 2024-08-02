@@ -5,6 +5,7 @@ Priority: optional
 Build-Depends: cmake,
                pkg-config,
                debhelper (>= 13),
+               doxygen,
                dh-python,
                libtinyxml2-dev,
                libgz-tools2-dev,

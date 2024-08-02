@@ -2,4 +2,4 @@ usr/include/*
 usr/lib/*/*.so
 usr/lib/*/pkgconfig/*.pc
 usr/lib/*/cmake/*-*/*
-# usr/share/*/*-*[0-99]/*-*[0-99].tag.xml
+usr/share/*/*-*[0-99]/*-*[0-99].tag.xml
