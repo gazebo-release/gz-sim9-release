@@ -1,3 +1,9 @@
+gz-sim9 (9.0.0~pre1-1~jammy) jammy; urgency=medium
+
+  * gz-sim9 9.0.0~pre1-1 release
+
+ -- Ian Chen <ichen@openrobotics.org>  Thu, 29 Aug 2024 06:14:22 +0000
+
 gz-sim9 (8.999.999-1~jammy) jammy; urgency=medium
 
   * Stub to be removed after first entry
