@@ -1,3 +1,9 @@
+gz-sim9 (9.0.0-1~noble) noble; urgency=medium
+
+  * gz-sim9 9.0.0-1 release
+
+ -- Ian Chen <ichen@openrobotics.org>  Fri, 27 Sep 2024 02:47:15 +0000
+
 gz-sim9 (9.0.0~pre1-1~noble) noble; urgency=medium
 
   * gz-sim9 9.0.0~pre1-1 release
