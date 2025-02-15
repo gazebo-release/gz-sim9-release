@@ -1,3 +1,9 @@
+gz-sim9 (9.1.0-1~jammy) jammy; urgency=medium
+
+  * gz-sim9 9.1.0-1 release
+
+ -- Carlos Aguero <caguero@openrobotics.org>  Sat, 15 Feb 2025 06:29:35 +0100
+
 gz-sim9 (9.0.0-1~jammy) jammy; urgency=medium
 
   * gz-sim9 9.0.0-1 release
