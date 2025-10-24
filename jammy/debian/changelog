@@ -1,3 +1,9 @@
+gz-sim9 (9.5.0-1~jammy) jammy; urgency=medium
+
+  * gz-sim9 9.5.0-1 release
+
+ -- Addisu Z. Taddese <addisu@openrobotics.org>  Fri, 24 Oct 2025 12:10:29 -0500
+
 gz-sim9 (9.4.0-1~jammy) jammy; urgency=medium
 
   * gz-sim9 9.4.0-1 release
