@@ -1,1 +1,32 @@
-../../ubuntu/debian/rules
+#!/usr/bin/make -f
+# -*- makefile -*-
+#
+# jammy carries doxygen 1.9.1, which segfaults on the Doxyfile gz-cmake
+# generates for gz-sim9. The shared ubuntu/debian/rules runs the doc target
+# only to export the API tag file, so jammy skips both the doc build and the
+# tag file, and jammy/debian/libgz-sim9-dev.install drops the matching entry.
+# Everything else is kept in sync with ../../ubuntu/debian/rules by hand.
+
+.PHONY: override_dh_auto_configure \
+        override_dh_install \
+        override_dh_auto_test
+
+%:
+	dh $@ --with python3
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+	-DCMAKE_BUILD_TYPE=RelWithDebInfo \
+	-DUSE_SYSTEM_PATHS_FOR_PYTHON_INSTALLATION=ON \
+	-DUSE_DIST_PACKAGES_FOR_PYTHON=ON
+
+override_dh_install:
+	dh_install --
+	$(RM) debian/gz-sim*/usr/share/gz/gz-sim*/gz-sim*.tag.xml
+
+override_dh_auto_test:
+	# failing tests needs inspection
+	true
+
+override_dh_strip:
+	dh_strip -a --dbg-package=libgz-sim9-dbg
