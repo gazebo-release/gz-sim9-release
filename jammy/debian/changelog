@@ -1,3 +1,9 @@
+gz-sim9 (9.7.0-1~jammy) jammy; urgency=medium
+
+  * gz-sim9 9.7.0-1 release
+
+ -- Arjo Chakravarty <arjo@intrinsic.ai>  Thu, 19 Nov 2026 10:04:01 +0000
+
 gz-sim9 (9.6.0-1~jammy) jammy; urgency=medium
 
   * gz-sim9 9.6.0-1 release
